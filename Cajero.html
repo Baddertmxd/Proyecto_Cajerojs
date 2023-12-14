@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="Cajero.css">
+</head>
+<body>
+    <h1 id="titulo">Cajero Automático</h1>
+
+
+    <div id="seccion">
+  <label for="accounts">Selecciona una cuenta:</label>
+  <select id="accounts">
+    <option value="0">Mali</option>
+    <option value="1">Gera</option>
+    <option value="2">Maui</option>
+  </select>
+
+  <br>
+
+  <label for="password">Ingresa tu contraseña:</label>
+  <input type="password" id="passwordInput">
+
+  <br>
+
+  <button onclick="login()">Ingresar</button>
+    </div>
+
+  <div id="operations">
+    <h2>Opciones:</h2>
+    <button onclick="checkBalance()">Consultar Saldo</button>
+    <button onclick="deposit()">Ingresar Monto</button>
+    <button onclick="withdraw()">Retirar Monto</button>
+  </div>
+
+  <div id="result"></div>
+  <script src="Cajero.js"></script>
+</body>
+<footer>
+    <h3>Realizado por Guillermo Amezcua</h3>
+</footer>
+</html>

@@ -1,19 +1,19 @@
-var accounts = [
+let accounts = [
   { nombre: "Mali", saldo: 200,contraseña: "contraseña1" },
   { nombre: "Gera", saldo: 290, contraseña: "contraseña2" },
   { nombre: "Maui", saldo: 67, contraseña: "contraseña3" }
 ];
 
-var selectedAccount;
-var passwordInput = document.getElementById('passwordInput');
-var operationsDiv = document.getElementById('operations');
-var resultDiv = document.getElementById('result');
+let selectedAccount;
+let passwordInput = document.getElementById('passwordInput');
+let operationsDiv = document.getElementById('operations');
+let resultDiv = document.getElementById('result');
 
 function login() {
-  var selectedAccountIndex = document.getElementById('accounts').value;
+  let selectedAccountIndex = document.getElementById('accounts').value;
   selectedAccount = accounts[selectedAccountIndex];
 
-  var password = passwordInput.value;
+  let password = passwordInput.value;
 
   if (password === selectedAccount.contraseña) { 
     operationsDiv.style.display = 'block';
@@ -27,7 +27,7 @@ function checkBalance() {
 }
 
 function deposit() {
-  var amount = parseFloat(prompt("Ingresa el monto a ingresar:"));
+  let amount = parseFloat(prompt("Ingresa el monto a ingresar:"));
 
   if (amount > 0 && selectedAccount.saldo + amount <= 990) {
     selectedAccount.saldo += amount;
